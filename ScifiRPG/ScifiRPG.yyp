@@ -1,5 +1,17 @@
 {
   "resources": [
+    {"id":{"name":"spr_pc_move_lr","path":"sprites/spr_pc_move_lr/spr_pc_move_lr.yy",},"order":3,},
+    {"id":{"name":"spr_pc_move_bt","path":"sprites/spr_pc_move_bt/spr_pc_move_bt.yy",},"order":2,},
+    {"id":{"name":"global_config","path":"objects/global_config/global_config.yy",},"order":0,},
+    {"id":{"name":"obj_pc","path":"objects/obj_pc/obj_pc.yy",},"order":0,},
+    {"id":{"name":"obj_chomper","path":"objects/obj_chomper/obj_chomper.yy",},"order":0,},
+    {"id":{"name":"scr_player_animate_sprite","path":"scripts/scr_player_animate_sprite/scr_player_animate_sprite.yy",},"order":0,},
+    {"id":{"name":"spr_pc_move_tb","path":"sprites/spr_pc_move_tb/spr_pc_move_tb.yy",},"order":1,},
+    {"id":{"name":"spr_pc_move_rl","path":"sprites/spr_pc_move_rl/spr_pc_move_rl.yy",},"order":4,},
+    {"id":{"name":"spr_chomper_idle","path":"sprites/spr_chomper_idle/spr_chomper_idle.yy",},"order":0,},
+    {"id":{"name":"factroy_tileset","path":"tilesets/factroy_tileset/factroy_tileset.yy",},"order":0,},
+    {"id":{"name":"spr_pc_idle","path":"sprites/spr_pc_idle/spr_pc_idle.yy",},"order":0,},
+    {"id":{"name":"floor_tiles","path":"sprites/floor_tiles/floor_tiles.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
@@ -31,6 +43,14 @@
     {"folderPath":"folders/Animation Curves.yy","order":12,"resourceVersion":"1.0","name":"Animation Curves","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Notes.yy","order":13,"resourceVersion":"1.0","name":"Notes","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Extensions.yy","order":14,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/objects.yy","order":1,"resourceVersion":"1.0","name":"objects","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/terrain.yy","order":2,"resourceVersion":"1.0","name":"terrain","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/objects/player character.yy","order":1,"resourceVersion":"1.0","name":"player character","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/objects/enemies.yy","order":2,"resourceVersion":"1.0","name":"enemies","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/player character.yy","order":1,"resourceVersion":"1.0","name":"player character","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/enemies.yy","order":2,"resourceVersion":"1.0","name":"enemies","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/player_character.yy","order":1,"resourceVersion":"1.0","name":"player_character","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/global_logic.yy","order":3,"resourceVersion":"1.0","name":"global_logic","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
