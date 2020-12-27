@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "attacks",
-    "path": "folders/Scripts/player_character/attacks.yy",
+    "path": "folders/Scripts/entities/player_character/attacks.yy",
   },
   "resourceVersion": "1.0",
   "name": "scr_calculate_attack_hits",

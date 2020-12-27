@@ -5,3 +5,15 @@
 #macro ROOM_START room_sandbox
 #macro RANDOMIZE false
 #macro ACTIVATE_RANGE 10
+
+enum ENEMY_STATE
+{
+	IDLE,
+	WANDER,
+	PATROL,
+	CHASE,
+	ATTACK,
+	HURT,
+	DIE,
+	WAIT
+}

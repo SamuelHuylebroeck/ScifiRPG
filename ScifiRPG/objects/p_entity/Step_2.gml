@@ -3,3 +3,5 @@
 if(!global.game_paused){
 	depth = -bbox_bottom
 }
+
+flash = max(0, flash -0.04)

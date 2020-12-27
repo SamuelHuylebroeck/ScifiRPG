@@ -18,11 +18,9 @@ function scr_calculate_attack_hits(hitbox_mask){
 			{
 				ds_list_add(entities_hit_by_attack, hit_id)
 				with(hit_id){
-					var previous_blend = image_blend
-					var next_blend = c_red
-					if(previous_blend == c_red) next_blend = c_blue
-					if(previous_blend == c_blue) next_blend = c_green
-					image_blend = next_blend;
+					if(entity_hit_script != -1){
+						script_execute(entity_hit_script)
+					}
 				}
 			}
 			
