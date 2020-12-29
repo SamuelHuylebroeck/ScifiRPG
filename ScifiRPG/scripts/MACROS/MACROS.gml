@@ -6,6 +6,14 @@
 #macro RANDOMIZE false
 #macro ACTIVATE_RANGE 10
 
+enum MOVE_DIRECTIONS
+{
+	T2B,
+	B2T,
+	L2R,
+	R2L
+}
+
 enum ENEMY_STATE
 {
 	IDLE,

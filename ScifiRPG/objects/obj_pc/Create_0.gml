@@ -6,6 +6,10 @@ combo_cooldown=0.25
 
 current_combo_cooldown=0.0
 
+max_hp = 100;
+current_hp = max_hp;
+
+//Sprite assignment
 anim_idle=spr_pc_idle
 anim_move_tb=spr_pc_move_tb
 anim_move_bt=spr_pc_move_bt
