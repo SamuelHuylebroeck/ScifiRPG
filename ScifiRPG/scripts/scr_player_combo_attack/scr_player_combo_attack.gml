@@ -54,8 +54,9 @@ function scr_player_combo_attack(default_next, next_chain, frame_start, frame_en
 		
 	}
 	//Check for next chain
-	if(key_attack_main){
-		next_state = next_chain
+	if(key_attack_main and (next_chain != noone) and (next_chain != -1)){
+		next_state = PLAYER_STATE.ATTACK_1;
+		next_attack_script = next_chain;
 	}
 	
 	//Check if we need to reset the hit list
@@ -77,8 +78,9 @@ function scr_player_combo_attack(default_next, next_chain, frame_start, frame_en
 	// End animation
 	if(image_index >= frame_end){
 		state=next_state
+		current_attack_script = next_attack_script
 		attack_done = true
-		if(next_state == scr_player_state_free) sprite_index = spr_pc_idle
+		if(next_state == PLAYER_STATE.FREE) sprite_index = spr_pc_idle
 	}
 	
 }
@@ -88,7 +90,7 @@ function scr_player_attack_slash_1(){
 	// Config, sprite specific data
 	var frame_start = 0
 	var frame_end = 5
-	var default_state = scr_player_state_free
+	var default_state = PLAYER_STATE.FREE
 	var next_chain = scr_player_attack_slash_2
 	var damage = 5;
 	var knockback = 10;
@@ -99,7 +101,7 @@ function scr_player_attack_slash_2(){
 	// Config, sprite specific data
 	var frame_start = 5
 	var frame_end = 8
-	var default_state = scr_player_state_free
+	var default_state = PLAYER_STATE.FREE
 	var next_chain = scr_player_attack_spin
 	var damage = 5;
 	var knockback = 10;
@@ -109,8 +111,8 @@ function scr_player_attack_slash_2(){
 function scr_player_attack_spin(){
 	var frame_start = 8
 	var frame_end = 14
-	var default_state = scr_player_state_free
-	var next_chain = scr_player_state_free
+	var default_state = PLAYER_STATE.FREE
+	var next_chain = noone
 	var damage = 5;
 	var knockback = 32;
 	scr_player_combo_attack(default_state, next_chain, frame_start, frame_end,[11], damage, knockback)
@@ -148,7 +150,6 @@ function scr_calculate_attack_hits(hitbox_mask, damage, knockback){
 	
 	ds_list_destroy(hit_by_attack_now)
 	mask_index = old_mask
-	
 }
 
 function hurt_enemy(enemy, damage, source, knockback)

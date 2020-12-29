@@ -14,7 +14,13 @@ function scr_chomper_attack(){
 	
 	
 	}
-	if ( image_index >= 11.80 ){
+	//Calculate hits, the hit frames are 5,6,7
+	if(5 <= floor(image_index) and floor(image_index) <=8){
+		scr_enemy_calculate_attack_hits(noone,5,32)
+	}
+	
+	//End the attack
+	if ( image_index + (sprite_get_speed(sprite_index)/game_get_speed(gamespeed_fps)) >= image_number ){
 		anticipation_pause = 0;
 		state_target = ENEMY_STATE.CHASE;
 		state_wait_duration = 0.2 * room_speed;

@@ -4,10 +4,14 @@
 // Inherit the parent event
 event_inherited();
 
+//Initial Config
 state = ENEMY_STATE.WANDER
 
-anticipation_pause_duration = 0.25 *  room_speed
+//Intrinsic variables
+anticipation_pause_duration = 0.25 *  game_get_speed(gamespeed_fps)
 anticipation_pause = 0;
+
+entities_hit_by_attack = -1
 
 //Enemy sprites
 sprite_idle = spr_chomper_idle;

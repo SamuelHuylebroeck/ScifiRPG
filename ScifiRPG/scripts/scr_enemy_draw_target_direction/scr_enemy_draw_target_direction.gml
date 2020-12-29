@@ -13,7 +13,6 @@ function scr_enemy_draw_target_direction(){
 		draw_set_color(c_yellow);
 	}
 	
-	var length = enemy_aggro_radius/3
 	draw_arrow(x,y,x_2,y_2,2);
 	draw_set_color(old_colour);
 }

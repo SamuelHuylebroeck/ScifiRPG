@@ -14,6 +14,18 @@ enum MOVE_DIRECTIONS
 	R2L
 }
 
+enum PLAYER_STATE
+{
+	FREE,
+	ATTACK_1,
+	ATTACK_2,
+	INTERACT,
+	HURT,
+	DIE
+	
+
+}
+
 enum ENEMY_STATE
 {
 	IDLE,

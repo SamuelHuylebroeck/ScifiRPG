@@ -12,4 +12,15 @@ input_direction = point_direction(0,0,key_right_held-key_left_held, key_down_hel
 input_magnitude = (key_right_held-key_left_held != 0) or (key_down_held-key_up_held != 0)
 
 
-if(!global.game_paused) script_execute(state)
+if(!global.game_paused)
+{
+	depth = -bbox_bottom
+	flash = max(0, flash -0.04)
+}
+
+if(!global.game_paused)
+{
+	if(state_map[state] != -1) script_execute(state_map[state])
+}
+
+remaining_grace_frames = max(0, --remaining_grace_frames)

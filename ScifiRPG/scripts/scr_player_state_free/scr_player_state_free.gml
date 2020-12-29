@@ -26,7 +26,7 @@ function scr_player_state_free(){
 		if(activate == noone || activate.entity_activate_script == -1)
 		{
 			//2. If there is nothing, or there is somethign without a script, smile
-			state = scr_player_state_smile
+			state = PLAYER_STATE.INTERACT
 			sprite_index = anim_smile;
 			image_index = 0;
 		}else{
@@ -41,8 +41,8 @@ function scr_player_state_free(){
 	//Main attack logic
 	if(key_attack_main and current_combo_cooldown<=0)
 	{
-		state = scr_player_state_attack
-		state_attack = scr_player_attack_slash_1
+		state = PLAYER_STATE.ATTACK_1
+		next_attack_script = scr_player_attack_slash_1
 	}
 	current_combo_cooldown = max(current_combo_cooldown - 1/room_speed, 0)
 }
