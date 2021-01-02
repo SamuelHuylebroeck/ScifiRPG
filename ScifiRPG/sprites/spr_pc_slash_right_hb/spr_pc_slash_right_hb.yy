@@ -124,8 +124,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"069b7214-69c8-418f-9cbd-ba8b85a69081","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "combo-slash",
-    "path": "folders/Sprites/objects/player character/attacks/combo-slash.yy",
+    "name": "combo slash",
+    "path": "folders/Sprites/objects/player character/attacks/combo slash.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_pc_slash_right_hb",

@@ -18,7 +18,7 @@ collision_map = layer_tilemap_get_id(layer_get_id("Collision"))
 state_map[PLAYER_STATE.FREE] = scr_player_state_free
 state_map[PLAYER_STATE.INTERACT] = scr_player_state_smile
 state_map[PLAYER_STATE.ATTACK_1] = scr_player_state_combo_attack
-state_map[PLAYER_STATE.ATTACK_2] = scr_player_state_smile
+state_map[PLAYER_STATE.ATTACK_2] = scr_player_shoot
 state_map[PLAYER_STATE.HURT] = scr_player_state_hurt
 state_map[PLAYER_STATE.DIE] = -1;
 

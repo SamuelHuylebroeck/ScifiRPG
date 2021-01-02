@@ -44,5 +44,10 @@ function scr_player_state_free(){
 		state = PLAYER_STATE.ATTACK_1
 		next_attack_script = scr_player_attack_slash_1
 	}
-	current_combo_cooldown = max(current_combo_cooldown - 1/room_speed, 0)
+	current_combo_cooldown = max(current_combo_cooldown - 1/game_get_speed(gamespeed_fps), 0)
+	
+	//Secondary attack logic
+	if(key_attack_secondary && state == PLAYER_STATE.FREE) {
+		state = PLAYER_STATE.ATTACK_2
+	}
 }

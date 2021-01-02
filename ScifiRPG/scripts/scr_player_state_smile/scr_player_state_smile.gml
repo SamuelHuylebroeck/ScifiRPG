@@ -2,6 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_player_state_smile(){
 	if (image_index == sprite_get_number(sprite_index)-1){
-		state = scr_player_state_free
+		state = PLAYER_STATE.FREE
 	}
 }
