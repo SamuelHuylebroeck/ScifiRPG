@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_chomper_wander(){
+function scr_enemy_wander(){
 
 	//At destination or given up
 	if( (x == x_to && y == y_to) || (time_passed > enemy_wander_distance / enemy_speed) )
@@ -41,7 +41,7 @@ function scr_chomper_wander(){
 		
 		
 		//Collide & move
-		scr_enemy_execute_turning(dir)
+		scr_enemy_execute_turning(dir, enemy_turn_rate_rs)
 		scr_enemy_execute_movement_and_collision();
 		scr_enemy_animate_move();
 

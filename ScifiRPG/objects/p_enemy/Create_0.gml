@@ -11,8 +11,8 @@ v_speed = 0;
 x_to = xstart;
 y_to = ystart;
 
-current_direction = direction;
-enemy_turn_rate_rs = enemy_turn_rate/room_speed
+
+enemy_turn_rate_rs = enemy_turn_rate/game_get_speed(gamespeed_fps)
 
 
 dir=0;

@@ -13,7 +13,6 @@ function scr_chomper_attack(){
 		
 		}
 	
-	
 	}
 	//Calculate hits, the hit frames are 5,6,7
 	if(5 <= floor(image_index) and floor(image_index) <=8)

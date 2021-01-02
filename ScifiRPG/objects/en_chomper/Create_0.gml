@@ -19,7 +19,7 @@ sprite_attack = spr_chomper_attack;
 sprite_move = spr_chomper_walk;
 
 //Enemy functions
-enemy_script[ENEMY_STATE.WANDER] = scr_chomper_wander;
+enemy_script[ENEMY_STATE.WANDER] = scr_enemy_wander;
 enemy_script[ENEMY_STATE.CHASE] = scr_chomper_chase;
 enemy_script[ENEMY_STATE.ATTACK] = scr_chomper_attack;
 enemy_script[ENEMY_STATE.HURT] = scr_chomper_hurt;
