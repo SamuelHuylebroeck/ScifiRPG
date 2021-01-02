@@ -12,7 +12,6 @@ function scr_gunner_chase(){
 		if (distance_to_target <= gunner_hold_range and  distance_to_target >= gunner_retreat_range)
 		{
 			speed_this_frame = 0
-			show_debug_message("Holding ground")
 		}
 		dir = point_direction(x,y,x_to, y_to);
 		h_speed = lengthdir_x(speed_this_frame, dir);
@@ -21,9 +20,7 @@ function scr_gunner_chase(){
 		{
 			h_speed *= -1;
 			v_speed *= -1;
-			show_debug_message("Retreating")
 		}
-		show_debug_message(string(h_speed)+","+string(v_speed))
 		
 		if( not (abs(angle_difference(direction, dir)) <= enemy_move_angle_tolerance)){
 			h_speed = 0;
@@ -37,7 +34,7 @@ function scr_gunner_chase(){
 	
 	
 	//Check if close enough to launch an attack
-	if (instance_exists(target) and (point_distance(x,y, target.x, target.y) <= enemy_attack_radius) and abs(angle_difference(direction, dir)) <= enemy_move_angle_tolerance and gunner_shot_cooldown > 0)
+	if (instance_exists(target) and (point_distance(x,y, target.x, target.y) <= enemy_attack_radius) and abs(angle_difference(direction, dir)) <= enemy_move_angle_tolerance and current_shot_cooldown <= 0)
 	{
 		state = ENEMY_STATE.ATTACK;
 		entity_collision = true;
