@@ -18,6 +18,7 @@
   "layers": [
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"global_config","path":"objects/global_config/global_config.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_44AA9FB8","path":"rooms/room_parent/room_parent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":true,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_44AA9FB8","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_music","path":"objects/obj_music/obj_music.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_227B2BB1","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Logic","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_pc_hud","path":"objects/obj_pc_hud/obj_pc_hud.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_119D4D2E","tags":[],"resourceType":"GMRInstance",},
@@ -81,6 +82,7 @@
     {"name":"inst_2616C667","path":"rooms/room_sandbox/room_sandbox.yy",},
     {"name":"inst_119D4D2E","path":"rooms/room_sandbox/room_sandbox.yy",},
     {"name":"inst_299A309C","path":"rooms/room_sandbox/room_sandbox.yy",},
+    {"name":"inst_227B2BB1","path":"rooms/room_sandbox/room_sandbox.yy",},
   ],
   "inheritCreationOrder": true,
   "sequenceId": null,
