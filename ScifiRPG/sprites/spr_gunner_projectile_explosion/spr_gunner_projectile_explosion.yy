@@ -44,7 +44,7 @@
     "spriteId": {"name":"spr_gunner_projectile_explosion","path":"sprites/spr_gunner_projectile_explosion/spr_gunner_projectile_explosion.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 20.0,
+    "playbackSpeed": 30.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

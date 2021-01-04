@@ -35,6 +35,11 @@ function scr_chomper_chase(){
 		ds_list_clear(entities_hit_by_attack);
 		state = ENEMY_STATE.ATTACK;
 		entity_collision = false;
+		if(enemy_sfx_attack != -1)
+		{
+			audio_sound_gain(enemy_sfx_attack,global.sfx_gain_base*global.sound_effect_scale*global.sound_master_scale,0)
+			audio_play_sound_on(entity_emit,enemy_sfx_attack,false,global.sfx_priority)
+		}
 		scr_enemy_animate_attack();
 		image_index=0;
 	}

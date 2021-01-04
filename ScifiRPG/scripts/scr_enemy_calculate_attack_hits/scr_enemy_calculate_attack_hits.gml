@@ -39,7 +39,12 @@ function hurt_player(player, damage, source, knockback)
 		{
 			if(remaining_grace_frames<=0)
 			{
-				current_hp -= damage;
+				current_hp -= damage;				
+				if(source.enemy_sfx_attack_hit != -1)
+				{
+					audio_sound_gain(source.enemy_sfx_attack_hit,global.sfx_gain_base*global.sound_effect_scale*global.sound_master_scale,0)
+					audio_play_sound_on(source.entity_emit,source.enemy_sfx_attack_hit,false,global.sfx_priority)
+				}
 			}else
 			{
 				show_debug_message("Damaged during grace period, damage not applied")

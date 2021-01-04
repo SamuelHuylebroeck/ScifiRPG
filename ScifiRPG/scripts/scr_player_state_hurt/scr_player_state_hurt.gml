@@ -22,5 +22,8 @@ function scr_player_state_hurt(){
 		x_to = -1;
 		y_to = -1;
 		state = PLAYER_STATE.FREE;
+		//Reset attacks
+		current_attack_script = scr_player_attack_slash_1;
+		attack_done = true;
 	}
 }

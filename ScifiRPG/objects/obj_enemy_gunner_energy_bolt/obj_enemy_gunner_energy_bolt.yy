@@ -28,8 +28,10 @@
   "overriddenProperties": [
     {"propertyId":{"name":"projectile_impact_player","path":"objects/p_projectile/p_projectile.yy",},"objectId":{"name":"p_projectile","path":"objects/p_projectile/p_projectile.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"projectile_damage","path":"objects/p_projectile/p_projectile.yy",},"objectId":{"name":"p_projectile","path":"objects/p_projectile/p_projectile.yy",},"value":"12","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"projectile_knockback","path":"objects/p_projectile/p_projectile.yy",},"objectId":{"name":"p_projectile","path":"objects/p_projectile/p_projectile.yy",},"value":"10","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"projectile_knockback","path":"objects/p_projectile/p_projectile.yy",},"objectId":{"name":"p_projectile","path":"objects/p_projectile/p_projectile.yy",},"value":"5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"projectile_impact_sprite","path":"objects/p_projectile/p_projectile.yy",},"objectId":{"name":"p_projectile","path":"objects/p_projectile/p_projectile.yy",},"value":"spr_gunner_projectile_explosion","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"projectile_lifetime","path":"objects/p_projectile/p_projectile.yy",},"objectId":{"name":"p_projectile","path":"objects/p_projectile/p_projectile.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"projectile_impact_sfx","path":"objects/p_projectile/p_projectile.yy",},"objectId":{"name":"p_projectile","path":"objects/p_projectile/p_projectile.yy",},"value":"so_gunner_projectile_explosion","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "enemies",

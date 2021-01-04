@@ -13,6 +13,8 @@ key_attack_secondary = keyboard_check_pressed(vk_shift)
 input_direction = point_direction(0,0,key_right_held-key_left_held, key_down_held-key_up_held);
 input_magnitude = (key_right_held-key_left_held != 0) or (key_down_held-key_up_held != 0)
 
+//Set audio listener
+audio_listener_position(x,y,0)
 
 if(!global.game_paused)
 {

@@ -26,6 +26,9 @@ gunner_shot_cooldown_gs = gunner_shot_cooldown * game_get_speed(gamespeed_fps)
 sprite_idle = spr_gunner_idle;
 sprite_attack = spr_gunner_shooting;
 sprite_move = spr_gunner_moving;
+sprite_hurt = spr_gunner_moving;
+sprite_die = spr_gunner_die;
+
 
 //Enemy functions
 enemy_script[ENEMY_STATE.WANDER] = scr_enemy_wander;

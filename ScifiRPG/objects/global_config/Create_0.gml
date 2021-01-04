@@ -6,9 +6,12 @@ global.up_key = "Z"
 global.down_key = "S"
 global.azerty = true
 
-global.sound_music_scale = 0.8;
+global.sound_music_scale = 0.5;
 global.sound_effect_scale = 1;
 global.sound_master_scale = 1;
+
+global.sfx_priority = 1100;
+global.sfx_gain_base = 1000;
 
 
 //debug_logic

@@ -56,6 +56,11 @@ function scr_enemy_wander(){
 		if(instance_exists(obj_pc) && (point_distance(x,y, obj_pc.x, obj_pc.y) <= enemy_aggro_radius))
 		{
 			show_debug_message("Target Found!")
+			if(enemy_sfx_aggro != -1)
+			{
+				audio_sound_gain(enemy_sfx_aggro,global.sfx_gain_base*global.sound_effect_scale*global.sound_master_scale,0)
+				audio_play_sound_on(entity_emit,enemy_sfx_aggro,false,global.sfx_priority)
+			}
 			state = ENEMY_STATE.CHASE;
 			target = obj_pc;
 		

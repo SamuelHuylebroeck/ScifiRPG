@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_player_combo_attack(default_next, next_chain, frame_start, frame_end, refresh_frames, damage, knockback){
+function scr_player_combo_attack(default_next, next_chain, frame_start, frame_end, refresh_frames, damage, knockback, sfx_attack, sfx_hit){
 	// Startup animation
 	if(attack_done)
 	{
@@ -51,6 +51,12 @@ function scr_player_combo_attack(default_next, next_chain, frame_start, frame_en
 			}
 		
 		}
+		//Play attack sound
+		if(sfx_attack != -1)
+		{
+			audio_sound_gain(sfx_attack,global.sfx_gain_base*global.sound_effect_scale*global.sound_master_scale,0)
+			audio_play_sound(sfx_attack,global.sfx_priority,false)
+		}
 		
 	}
 	//Check for next chain
@@ -73,14 +79,18 @@ function scr_player_combo_attack(default_next, next_chain, frame_start, frame_en
 	}
 	
 	//Calculate hits
-	scr_calculate_attack_hits(hit_box_mask, damage, knockback)
+	scr_calculate_attack_hits(hit_box_mask, damage, knockback, sfx_hit)
 	
 	// End animation
 	if(image_index >= frame_end){
 		state=next_state
 		current_attack_script = next_attack_script
 		attack_done = true
-		if(next_state == PLAYER_STATE.FREE) sprite_index = spr_pc_idle
+		if(next_state == PLAYER_STATE.FREE)
+		{
+			sprite_index = spr_pc_idle
+			current_attack_script=scr_player_attack_slash_1
+		} 
 	}
 	
 }
@@ -94,7 +104,7 @@ function scr_player_attack_slash_1(){
 	var next_chain = scr_player_attack_slash_2
 	var damage = 5;
 	var knockback = 10;
-	scr_player_combo_attack(default_state, next_chain, frame_start, frame_end, noone, damage, knockback)
+	scr_player_combo_attack(default_state, next_chain, frame_start, frame_end, noone, damage, knockback,so_pc_combo_slash_1, so_pc_combo_slash_hit)
 }
 
 function scr_player_attack_slash_2(){
@@ -105,7 +115,7 @@ function scr_player_attack_slash_2(){
 	var next_chain = scr_player_attack_spin
 	var damage = 5;
 	var knockback = 10;
-	scr_player_combo_attack(default_state, next_chain, frame_start, frame_end, noone, damage, knockback)
+	scr_player_combo_attack(default_state, next_chain, frame_start, frame_end, noone, damage, knockback,so_pc_combo_slash_1, so_pc_combo_slash_hit)
 }
 
 function scr_player_attack_spin(){
@@ -115,11 +125,11 @@ function scr_player_attack_spin(){
 	var next_chain = noone
 	var damage = 5;
 	var knockback = 32;
-	scr_player_combo_attack(default_state, next_chain, frame_start, frame_end,[11], damage, knockback)
+	scr_player_combo_attack(default_state, next_chain, frame_start, frame_end,[11], damage, knockback,so_pc_combo_slash_spin, so_pc_combo_slash_hit)
 	current_combo_cooldown = combo_cooldown
 }
 
-function scr_calculate_attack_hits(hitbox_mask, damage, knockback){
+function scr_calculate_attack_hits(hitbox_mask, damage, knockback, sfx_hit){
 	//Use attack hitbox and check for hits
 	var old_mask = mask_index
 	mask_index = hitbox_mask
@@ -139,7 +149,7 @@ function scr_calculate_attack_hits(hitbox_mask, damage, knockback){
 				{
 					if(object_is_ancestor(object_index, p_enemy))
 					{
-						hurt_enemy(id, damage, other.id, knockback);
+						hurt_enemy(id, damage, other.id, knockback, sfx_hit);
 					}
 					else if(entity_hit_script != -1) script_execute(entity_hit_script);
 				}

@@ -28,6 +28,11 @@ function scr_gunner_attack(){
 		
 		
 		shot_fired = instance_create_layer(x+shot_origin_correction_x,y+shot_origin_correction_y,"Instances",obj_enemy_gunner_energy_bolt);
+		if(enemy_sfx_attack != -1)
+		{
+			audio_sound_gain(enemy_sfx_attack, global.sfx_gain_base*global.sound_effect_scale*global.sound_master_scale,0)
+			audio_play_sound_on(entity_emit,enemy_sfx_attack,false,global.sfx_priority)
+		}
 		with(shot_fired)
 		{
 			direction = other.direction
@@ -41,7 +46,6 @@ function scr_gunner_attack(){
 		anticipation_pause = 0;
 		shots_fired = 0;
 		current_shot_cooldown = gunner_shot_cooldown_gs
-		show_debug_message(string(current_shot_cooldown))
 		state_target = ENEMY_STATE.CHASE;
 		state_wait_duration = 0.2 * room_speed;
 		state = ENEMY_STATE.WAIT;
