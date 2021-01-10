@@ -33,6 +33,7 @@
     {"propertyId":{"name":"projectile_impact_sprite","path":"objects/p_projectile/p_projectile.yy",},"objectId":{"name":"p_projectile","path":"objects/p_projectile/p_projectile.yy",},"value":"spr_pc_energy_bolt_impact","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"projectile_knockback","path":"objects/p_projectile/p_projectile.yy",},"objectId":{"name":"p_projectile","path":"objects/p_projectile/p_projectile.yy",},"value":"5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"projectile_damage","path":"objects/p_projectile/p_projectile.yy",},"objectId":{"name":"p_projectile","path":"objects/p_projectile/p_projectile.yy",},"value":"25","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"projectile_impact_sfx","path":"objects/p_projectile/p_projectile.yy",},"objectId":{"name":"p_projectile","path":"objects/p_projectile/p_projectile.yy",},"value":"so_pc_energy_bolt_hit","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "player character",

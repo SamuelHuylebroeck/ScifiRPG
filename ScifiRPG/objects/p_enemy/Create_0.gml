@@ -11,6 +11,8 @@ v_speed = 0;
 x_to = xstart;
 y_to = ystart;
 
+depth = 50;
+
 
 enemy_turn_rate_rs = enemy_turn_rate/game_get_speed(gamespeed_fps)
 
@@ -18,7 +20,7 @@ enemy_turn_rate_rs = enemy_turn_rate/game_get_speed(gamespeed_fps)
 dir=0;
 time_passed = 0;
 wait_duration_base = 1; //In seconds
-wait_duration_current = (wait_duration_base + irandom(enemy_wander_wait_time_variance)) * room_speed
+wait_duration_current = (wait_duration_base + irandom(enemy_wander_wait_time_variance)) * game_get_speed(gamespeed_fps)
 wait = 0;
 
 state_target = state;
@@ -32,6 +34,8 @@ aggro_check_interval = 5;
 target = noone;
 
 enemy_current_hp = enemy_max_hp;
+
+controlling_spawner = noone;
 
 //Enemy sprites
 sprite_idle = spr_chomper_idle;

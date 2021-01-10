@@ -37,3 +37,11 @@ enum ENEMY_STATE
 	DIE,
 	WAIT
 }
+
+enum SPAWNER_STATE
+{
+	IDLE,
+	SPAWNING,
+	DORMANT,
+	WAIT
+}

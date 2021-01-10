@@ -43,11 +43,14 @@ function scr_player_shoot(){
 	
 	//Create Shot
 	if(floor(image_index) == 3 and  shots_fired < shots_to_fire){
-		shot_fired = instance_create_layer(x+origin_correction_x,y+origin_correction_y,"Instances",obj_pc_energy_bolt);
+		var shot_fired = instance_create_layer(x+origin_correction_x,y+origin_correction_y,"Instances",obj_pc_energy_bolt);
+		audio_sound_gain(so_pc_energy_bolt, global.sfx_gain_base*global.sound_effect_scale*global.sound_master_scale,0)
+		audio_play_sound(so_pc_energy_bolt,global.sfx_priority,false)
 		with(shot_fired)
 		{
-			direction = other.direction
-			image_angle = other.direction
+			var cardinal_direction = round(other.direction/90)
+			direction = cardinal_direction*90
+			image_angle = cardinal_direction*90
 		}
 		shots_fired++
 	}

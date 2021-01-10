@@ -40,5 +40,9 @@ flash = 0
 us_flash = shader_get_uniform(sha_white_flash, "flash") //Sends flash value to flash shader in the draw event
 z = 0
 
+depth = 0;
+
 remaining_grace_frames = 0
+
+player_debug_mode = false
 
