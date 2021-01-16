@@ -14,7 +14,7 @@ state = SPAWNER_STATE.IDLE;
 
 //Animation sprites
 spawner_sprite[SPAWNER_STATE.IDLE] = spr_spawner_idle_relax;
-spawner_sprite[SPAWNER_STATE.SPAWNING] = spawner_anime_spawn_sprite;
+spawner_sprite[SPAWNER_STATE.SPAWNING] = spr_spawner_spawning;
 spawner_sprite[SPAWNER_STATE.DORMANT] = spr_spawner_idle_relax;
 spawner_sprite[SPAWNER_STATE.WAIT] = spr_spawner_idle_relax;
 

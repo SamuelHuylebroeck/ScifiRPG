@@ -37,6 +37,9 @@ enemy_current_hp = enemy_max_hp;
 
 controlling_spawner = noone;
 
+patrolling = false;
+patrol_path = noone;
+
 //Enemy sprites
 sprite_idle = spr_chomper_idle;
 sprite_move = spr_chomper_walk;
@@ -47,6 +50,7 @@ sprite_die = spr_chomper_die;
 //Enemy functions
 enemy_script[ENEMY_STATE.IDLE] = -1;
 enemy_script[ENEMY_STATE.WANDER] = -1;
+enemy_script[ENEMY_STATE.PATROL] = scr_enemy_patrolling;
 enemy_script[ENEMY_STATE.CHASE] = -1;
 enemy_script[ENEMY_STATE.ATTACK] = -1;
 enemy_script[ENEMY_STATE.HURT] = -1;

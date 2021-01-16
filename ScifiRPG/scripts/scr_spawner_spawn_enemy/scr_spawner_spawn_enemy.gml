@@ -3,7 +3,6 @@
 function scr_spawner_spawn_enemy(){
 	if(not spawn_in_progress)
 	{
-		show_debug_message("Start spawn unit");
 		//Start the process
 		sprite_index = spawner_sprite[SPAWNER_STATE.SPAWNING];
 		image_index = 0;
@@ -15,9 +14,8 @@ function scr_spawner_spawn_enemy(){
 		
 		if(spawner_unit_type != -1)
 		{
-			show_debug_message("Trying to spawn a unit");
 			has_spawned = true;
-			
+			show_debug_message(string(image_index))
 			if(nr_active_spawns < spawner_limit )
 			{
 				nr_active_spawns++;
@@ -26,8 +24,19 @@ function scr_spawner_spawn_enemy(){
 				{
 					controlling_spawner = other.id;
 					collision_map = layer_tilemap_get_id(layer_get_id("Collision"))
+					flash=0.5;
+					image_alpha = 0.25;
+					
+					if(other.spawner_patrol_path != -1)
+					{
+						patrol_path = other.spawner_patrol_path;
+						state = ENEMY_STATE.PATROL;
+						patrolling = false;
+					}else
+					{
+						state = ENEMY_STATE.WANDER;	
+					}
 				}
-				show_debug_message("Unit spawned");
 			}
 		}	
 	}
@@ -35,8 +44,6 @@ function scr_spawner_spawn_enemy(){
 	//End the spawn
 	if ( image_index + (sprite_get_speed(sprite_index)/game_get_speed(gamespeed_fps)) >= image_number )
 	{
-		
-		show_debug_message("finish spawn unit");
 		state = SPAWNER_STATE.IDLE;
 		spawn_current_cooldown_gs = spawn_cooldown * game_get_speed(gamespeed_fps);
 		sprite_index = spawner_sprite[SPAWNER_STATE.IDLE];

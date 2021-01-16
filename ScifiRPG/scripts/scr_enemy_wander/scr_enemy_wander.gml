@@ -44,27 +44,24 @@ function scr_enemy_wander(){
 		scr_enemy_execute_turning(dir, enemy_turn_rate_rs)
 		scr_enemy_execute_movement_and_collision();
 		scr_enemy_animate_move();
-
+		
+		check_for_aggro_wander();
 
 	
 	}
+
+	
+}
+
+function check_for_aggro_wander()
+{
 	//Check for aggro
-	if (++aggro_check > aggro_check_interval)
-	{
-		
-		aggro_check = 0;
-		if(instance_exists(obj_pc) && (point_distance(x,y, obj_pc.x, obj_pc.y) <= enemy_aggro_radius))
-		{
-			show_debug_message("Target Found!")
-			if(enemy_sfx_aggro != -1)
-			{
-				audio_sound_gain(enemy_sfx_aggro,global.sfx_gain_base*global.sound_effect_scale*global.sound_master_scale,0)
-				audio_play_sound_on(entity_emit,enemy_sfx_aggro,false,global.sfx_priority)
-			}
-			state = ENEMY_STATE.CHASE;
-			target = obj_pc;
-		
-		}
+	if(scr_enemy_check_aggro()){
+		show_debug_message("Target Found!");
+		scr_enemy_aggro_play_acquired_sfx();
+		scr_enemy_aggro_setup_chase();
+		//Wander specific cleanup
+		state_previous = state;
+
 	}
-	
 }
