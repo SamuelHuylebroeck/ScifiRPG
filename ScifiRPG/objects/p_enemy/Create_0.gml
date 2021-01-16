@@ -25,6 +25,7 @@ wait = 0;
 
 state_target = state;
 state_previous = state;
+state_initialized = false;
 state_wait = 0;
 state_wait_duration = 0;
 
@@ -37,7 +38,6 @@ enemy_current_hp = enemy_max_hp;
 
 controlling_spawner = noone;
 
-patrolling = false;
 patrol_path = noone;
 
 //Enemy sprites

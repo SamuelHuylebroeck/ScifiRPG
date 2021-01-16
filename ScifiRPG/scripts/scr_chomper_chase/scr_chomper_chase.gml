@@ -27,20 +27,7 @@ function scr_chomper_chase(){
 	//Check if close enough to launch an attack
 	if (instance_exists(target) && (point_distance(x,y, target.x, target.y) <= enemy_attack_radius))
 	{
-		//Clear hit list
-		if (!ds_exists(entities_hit_by_attack, ds_type_list))
-		{
-			entities_hit_by_attack = ds_list_create();
-		}
-		ds_list_clear(entities_hit_by_attack);
 		state = ENEMY_STATE.ATTACK;
-		entity_collision = false;
-		if(enemy_sfx_attack != -1)
-		{
-			audio_sound_gain(enemy_sfx_attack,global.sfx_gain_base*global.sound_effect_scale*global.sound_master_scale,0)
-			audio_play_sound_on(entity_emit,enemy_sfx_attack,false,global.sfx_priority)
-		}
-		scr_enemy_animate_attack();
-		image_index=0;
+		state_initialized = false;	
 	}
 }

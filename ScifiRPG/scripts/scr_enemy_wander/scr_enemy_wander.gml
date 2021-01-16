@@ -62,6 +62,7 @@ function check_for_aggro_wander()
 		scr_enemy_aggro_setup_chase();
 		//Wander specific cleanup
 		state_previous = state;
+		state_initialized = false;
 
 	}
 }

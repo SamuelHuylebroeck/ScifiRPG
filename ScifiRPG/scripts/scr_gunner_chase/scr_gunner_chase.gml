@@ -37,8 +37,6 @@ function scr_gunner_chase(){
 	if (instance_exists(target) and (point_distance(x,y, target.x, target.y) <= enemy_attack_radius) and abs(angle_difference(direction, dir)) <= enemy_move_angle_tolerance and current_shot_cooldown <= 0)
 	{
 		state = ENEMY_STATE.ATTACK;
-		entity_collision = true;
-		scr_enemy_animate_attack();
-		image_index=0;
+		state_initialized = false;
 	}
 }

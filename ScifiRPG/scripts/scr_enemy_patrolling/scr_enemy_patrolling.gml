@@ -2,8 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_enemy_patrolling(){
 	
-	if(not patrolling and patrol_path != noone){
-		patrolling = true;
+	if(not state_initialized and patrol_path != noone){
+		state_initialized = true;
 		path_start(patrol_path,enemy_speed, path_action_continue, true);
 	}
 	scr_enemy_animate_move();
@@ -19,7 +19,7 @@ function check_for_aggro_patrol()
 		scr_enemy_aggro_setup_chase();
 		//Patrol specific cleanup
 		state_previous = state;
-		patrolling = false;
+		state_initialized = false;
 		path_end();
 
 	}

@@ -1,6 +1,10 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_gunner_attack(){
+	if(not state_initialized)
+	{
+		scr_gunner_attack_init()
+	}
 	var dir = point_direction(x,y,target.x, target.y);
 	scr_enemy_execute_turning(dir, gunner_shooting_turn_rate_gs)
 	scr_enemy_animate_attack()
@@ -51,5 +55,14 @@ function scr_gunner_attack(){
 		state = ENEMY_STATE.WAIT;
 		sprite_index = sprite_idle;
 		entity_collision = true;
+		state_initialized = false;
 	}
+}
+
+function scr_gunner_attack_init(){
+		entity_collision = true;
+		scr_enemy_animate_attack();
+		image_index=0;
+		state_initialized = true;
+		shots_fired = 0;
 }
