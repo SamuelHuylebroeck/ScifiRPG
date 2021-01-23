@@ -8,6 +8,7 @@ function scr_enemy_patrolling(){
 	}
 	scr_enemy_animate_move();
 	check_for_aggro_patrol();
+	
 }
 
 function check_for_aggro_patrol()
@@ -18,9 +19,7 @@ function check_for_aggro_patrol()
 		scr_enemy_aggro_play_acquired_sfx();
 		scr_enemy_aggro_setup_chase();
 		//Patrol specific cleanup
-		state_previous = state;
 		state_initialized = false;
 		path_end();
-
 	}
 }

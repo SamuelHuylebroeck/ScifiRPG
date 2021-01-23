@@ -13,3 +13,17 @@ function scr_draw_health_bar(x_pos,y_pos, health_fraction, scale){
 		image_alpha
 	)
 }
+
+function scr_draw_empty_health_bar(x_pos,y_pos, scale){
+	draw_sprite_ext(
+		spr_ui_pc_health_icon_empty,
+		0,
+		x_pos,
+		y_pos,
+		image_xscale*scale,
+		image_yscale*scale,
+		image_angle,
+		image_blend,
+		image_alpha
+	)
+}

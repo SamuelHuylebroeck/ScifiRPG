@@ -1,6 +1,11 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_chomper_chase(){
+	if (not state_initialized){
+		current_enemy_aggro_duration = enemy_aggro_duration_gs;
+		state_initialized = true;
+	}
+	
 	if (instance_exists(target) )
 	{
 		x_to = target.x;
@@ -21,6 +26,7 @@ function scr_chomper_chase(){
 		scr_enemy_execute_turning(dir, enemy_turn_rate_rs)
 		scr_enemy_execute_movement_and_collision();
 		scr_enemy_animate_move();
+		
 	}
 	
 	
@@ -30,4 +36,5 @@ function scr_chomper_chase(){
 		state = ENEMY_STATE.ATTACK;
 		state_initialized = false;	
 	}
+	scr_enemy_aggro_deaggro_check();
 }

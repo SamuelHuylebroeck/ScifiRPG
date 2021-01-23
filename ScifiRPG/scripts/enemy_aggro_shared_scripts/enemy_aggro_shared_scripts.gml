@@ -30,3 +30,30 @@ function scr_enemy_aggro_setup_chase(){
 	state = ENEMY_STATE.CHASE;
 	target = obj_pc;
 }
+
+function scr_enemy_aggro_deaggro_check(){
+	if(current_enemy_aggro_duration == 0)
+	{
+		//De-aggro
+		target = noone;
+		if(state_default==ENEMY_STATE.WANDER)
+		{
+			state_target = ENEMY_STATE.WANDER;
+			state = ENEMY_STATE.GOTO;
+			state_initialized = false;
+			x_to = xstart;
+			y_to = ystart;
+		}
+		if(state_default==ENEMY_STATE.PATROL)
+		{
+			state_target = ENEMY_STATE.PATROL;
+			state = ENEMY_STATE.GOTO;
+			state_initialized = false;
+			x_to = path_get_point_x(patrol_path, 0);
+			y_to = path_get_point_y(patrol_path, 0);;
+		}
+	}
+	
+	
+	current_enemy_aggro_duration= max(0,--current_enemy_aggro_duration);
+}

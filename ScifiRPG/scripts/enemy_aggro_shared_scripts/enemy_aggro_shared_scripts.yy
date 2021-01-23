@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "shared_behaviours",
-    "path": "folders/Scripts/entities/enemies/shared_behaviours.yy",
+    "name": "enemies",
+    "path": "folders/Scripts/entities/enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "enemy_aggro_shared_scripts",

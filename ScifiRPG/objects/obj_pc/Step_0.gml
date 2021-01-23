@@ -5,9 +5,9 @@ key_right_held = keyboard_check(vk_right) or keyboard_check(ord(global.right_key
 key_up_held = keyboard_check(vk_up) or keyboard_check(ord(global.up_key));
 key_down_held =  keyboard_check(vk_down) or keyboard_check(ord(global.down_key));
 
-key_activate = keyboard_check_pressed(ord("F"))
-key_attack_main = keyboard_check_pressed(vk_enter)
-key_attack_secondary = keyboard_check_pressed(vk_shift)
+key_activate = keyboard_check_pressed(ord(global.activate_key))
+key_attack_main = keyboard_check_pressed(global.attack_key)
+key_attack_secondary = keyboard_check_pressed(global.shoot_key)
 
 
 input_direction = point_direction(0,0,key_right_held-key_left_held, key_down_held-key_up_held);
@@ -28,3 +28,13 @@ if(!global.game_paused)
 }
 
 remaining_grace_frames = max(0, --remaining_grace_frames)
+
+//Regenate health
+current_hp = min(current_hp + regenate_hp_sec / game_get_speed(gamespeed_fps), max_hp);
+
+//Check for levelup
+if(current_xp >= xp_to_next_level && current_level < max_level)
+{
+	
+	scr_levelup()
+}

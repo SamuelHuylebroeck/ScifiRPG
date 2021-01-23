@@ -9,6 +9,7 @@ frame_x_offset = 0;
 frame_y_offset = 0;
 
 health_bar_sprite = spr_ui_pc_health_icon;
+health_bar_empty_sprite = spr_ui_pc_health_icon_empty;
 health_bar_initial_offset_x = 42*frame_scale;
 health_bar_initial_offset_y = 32*frame_scale;
 

@@ -13,9 +13,7 @@ y_to = ystart;
 
 depth = 50;
 
-
 enemy_turn_rate_rs = enemy_turn_rate/game_get_speed(gamespeed_fps)
-
 
 dir=0;
 time_passed = 0;
@@ -28,9 +26,13 @@ state_previous = state;
 state_initialized = false;
 state_wait = 0;
 state_wait_duration = 0;
+state_default = ENEMY_STATE.WANDER;
 
 aggro_check = 0;
 aggro_check_interval = 5;
+
+enemy_aggro_duration_gs = enemy_aggro_duration * game_get_speed(gamespeed_fps);
+current_enemy_aggro_duration = 0;
 
 target = noone;
 
@@ -39,6 +41,8 @@ enemy_current_hp = enemy_max_hp;
 controlling_spawner = noone;
 
 patrol_path = noone;
+
+goto_path = path_add();
 
 //Enemy sprites
 sprite_idle = spr_chomper_idle;
@@ -50,6 +54,7 @@ sprite_die = spr_chomper_die;
 //Enemy functions
 enemy_script[ENEMY_STATE.IDLE] = -1;
 enemy_script[ENEMY_STATE.WANDER] = -1;
+enemy_script[ENEMY_STATE.GOTO] = scr_enemy_goto
 enemy_script[ENEMY_STATE.PATROL] = scr_enemy_patrolling;
 enemy_script[ENEMY_STATE.CHASE] = -1;
 enemy_script[ENEMY_STATE.ATTACK] = -1;

@@ -10,6 +10,12 @@ anim_smile = spr_pc_smile;
 
 anim_hurt = spr_pc_hurt;
 
+//Levelup modifiers
+available_energy = 0;
+melee_damage_bonus = 0;
+ranged_damage_bonus = 0;
+regenate_hp_sec = 0;
+
 //Game logic variables
 h_speed=0
 v_speed=0
@@ -23,7 +29,6 @@ state_map[PLAYER_STATE.HURT] = scr_player_state_hurt
 state_map[PLAYER_STATE.DIE] = -1;
 
 state = PLAYER_STATE.FREE
-last_state = state
 
 current_combo_cooldown=0.0
 current_hp = max_hp;
@@ -45,4 +50,10 @@ depth = 0;
 remaining_grace_frames = 0
 
 player_debug_mode = false
+
+allocated_reactor_points = 0;
+
+current_level = 1;
+xp_to_next_level = (current_level+1) * global.levelling_xp_scale
+current_xp = 0;
 

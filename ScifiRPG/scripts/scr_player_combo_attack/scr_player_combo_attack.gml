@@ -79,7 +79,7 @@ function scr_player_combo_attack(default_next, next_chain, frame_start, frame_en
 	}
 	
 	//Calculate hits
-	scr_calculate_attack_hits(hit_box_mask, damage, knockback, sfx_hit)
+	scr_calculate_attack_hits(hit_box_mask, damage+melee_damage_bonus, knockback, sfx_hit)
 	
 	// End animation
 	if(image_index >= frame_end){
@@ -149,6 +149,7 @@ function scr_calculate_attack_hits(hitbox_mask, damage, knockback, sfx_hit){
 				{
 					if(object_is_ancestor(object_index, p_enemy))
 					{
+						show_debug_message(string(damage));
 						hurt_enemy(id, damage, other.id, knockback, sfx_hit);
 					}
 					else if(entity_hit_script != -1) script_execute(entity_hit_script);

@@ -15,10 +15,10 @@ function scr_spawner_spawn_enemy(){
 		if(spawner_unit_type != -1)
 		{
 			has_spawned = true;
-			show_debug_message(string(image_index))
 			if(nr_active_spawns < spawner_limit )
 			{
 				nr_active_spawns++;
+				spawner_xp_giving_units = max(0, --spawner_xp_giving_units)
 				spawned_unit = instance_create_layer(x,y, "Instances", spawner_unit_type);
 				with(spawned_unit)
 				{
@@ -26,15 +26,29 @@ function scr_spawner_spawn_enemy(){
 					collision_map = layer_tilemap_get_id(layer_get_id("Collision"))
 					flash=0.5;
 					image_alpha = 0.25;
+					state_initialized = false;
+					direction = other.direction;
+					if(other.spawner_xp_giving_units ==0) enemy_xp_given = 0
 					
 					if(other.spawner_patrol_path != -1)
 					{
 						patrol_path = other.spawner_patrol_path;
-						state = ENEMY_STATE.PATROL;
-						patrolling = false;
+						state = ENEMY_STATE.GOTO;
+						state_target = ENEMY_STATE.PATROL;
+						state_default = ENEMY_STATE.PATROL;
+						x_to = path_get_point_x(patrol_path,0);
+						y_to = path_get_point_y(patrol_path,0);
+						
 					}else
 					{
-						state = ENEMY_STATE.WANDER;	
+						var length = 80;
+						
+						xstart = xstart + lengthdir_x(length, other.image_angle-90);
+						ystart = ystart + lengthdir_y(length, other.image_angle-90);
+						x_to = xstart;
+						y_to = ystart;
+						state = ENEMY_STATE.GOTO;
+						state_default = ENEMY_STATE.WANDER;
 					}
 				}
 			}

@@ -46,3 +46,7 @@ enum SPAWNER_STATE
 	DORMANT,
 	WAIT
 }
+
+//Colour definition
+#macro GUI_ORANGE_DARK make_color_rgb(147,78,72)
+#macro GUI_ORANGE_BRIGHT make_color_rgb(184,99,67)

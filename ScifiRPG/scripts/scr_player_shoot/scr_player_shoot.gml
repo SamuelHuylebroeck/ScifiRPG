@@ -51,6 +51,7 @@ function scr_player_shoot(){
 			var cardinal_direction = round(other.direction/90)
 			direction = cardinal_direction*90
 			image_angle = cardinal_direction*90
+			projectile_damage += other.ranged_damage_bonus;
 		}
 		shots_fired++
 	}
