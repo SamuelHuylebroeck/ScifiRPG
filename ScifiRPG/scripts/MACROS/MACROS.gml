@@ -49,4 +49,4 @@ enum SPAWNER_STATE
 
 //Colour definition
 #macro GUI_ORANGE_DARK make_color_rgb(147,78,72)
-#macro GUI_ORANGE_BRIGHT make_color_rgb(184,99,67)
+#macro GUI_ORANGE_BRIGHT make_color_rgb(188,133,99)

@@ -31,6 +31,8 @@ remaining_grace_frames = max(0, --remaining_grace_frames)
 
 //Regenate health
 current_hp = min(current_hp + regenate_hp_sec / game_get_speed(gamespeed_fps), max_hp);
+//Regenerate energy
+current_energy = min(current_energy + energy_regen_gs, max_energy);
 
 //Check for levelup
 if(current_xp >= xp_to_next_level && current_level < max_level)

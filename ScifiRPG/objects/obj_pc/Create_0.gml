@@ -11,7 +11,6 @@ anim_smile = spr_pc_smile;
 anim_hurt = spr_pc_hurt;
 
 //Levelup modifiers
-available_energy = 0;
 melee_damage_bonus = 0;
 ranged_damage_bonus = 0;
 regenate_hp_sec = 0;
@@ -33,6 +32,8 @@ state = PLAYER_STATE.FREE
 current_combo_cooldown=0.0
 current_hp = max_hp;
 
+max_energy = 3;
+current_energy = max_energy;
 
 current_attack_script = scr_player_attack_slash_1;
 next_attack_script = scr_player_attack_slash_1;
@@ -57,3 +58,4 @@ current_level = 1;
 xp_to_next_level = (current_level+1) * global.levelling_xp_scale
 current_xp = 0;
 
+energy_regen_gs = energy_regen /game_get_speed(gamespeed_fps);

@@ -1,5 +1,23 @@
 /// @description Insert description here
 // You can write your code in this editor
+var x_pos = 46*frame_scale;
+var y_pos = 44*frame_scale;
+//Draw the shot energy
+for(var i = 0; i< floor(player_character.current_energy); i++)
+{
+	draw_sprite_ext(
+		spr_ui_pc_shot_energy,
+		floor(current_frame_index)%4,
+		x_pos,
+		y_pos,
+		image_xscale*frame_scale,
+		image_yscale*frame_scale,
+		image_angle,
+		image_blend,
+		image_alpha
+	)
+	x_pos += 14*frame_scale
+}
 
 //Draw the frame
 draw_sprite_ext(
@@ -12,13 +30,15 @@ draw_sprite_ext(
 	image_angle,
 	image_blend,
 	image_alpha
-)
+) 
+ 
+
 
 //Draw health
 var x_pos = health_bar_initial_offset_x;
 var y_pos = health_bar_initial_offset_y;
-var total_nr_bars = floor(player_character.max_hp / health_block_capacity)
-for (i = 0; i<total_nr_bars; i++)
+var total_nr_bars = ceil(player_character.max_hp / health_block_capacity)
+for (var i = 0; i<total_nr_bars; i++)
 {
 	scr_draw_empty_health_bar(x_pos, y_pos, frame_scale )
 	x_pos += sprite_get_width(health_bar_sprite)*frame_scale-4*frame_scale
@@ -29,7 +49,7 @@ var nr_of_full_bars = floor(player_character.current_hp / health_block_capacity)
 
 var x_pos = health_bar_initial_offset_x;
 var y_pos = health_bar_initial_offset_y;
-for (i = 0; i<nr_of_full_bars; i++)
+for (var i = 0; i<nr_of_full_bars; i++)
 {
 	scr_draw_health_bar(x_pos, y_pos, 0.9, frame_scale )
 	x_pos += sprite_get_width(health_bar_sprite)*frame_scale-4*frame_scale
@@ -40,9 +60,6 @@ if(player_character.current_hp > 0 )
 	var bar_fraction = (player_character.current_hp % health_block_capacity)/health_block_capacity
 	scr_draw_health_bar(x_pos, y_pos, bar_fraction, frame_scale )
 }
-
-
-
 
 //Draw reactor point allocation
 x_pos = 90*frame_scale
