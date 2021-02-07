@@ -35,6 +35,12 @@
     {"varType":0,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"projectile_knockback","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":5,"value":"-1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"projectile_impact_sfx","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":5,"value":"-1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"enemy_sfx_attack_hit","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":1,"value":"1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"projectile_nr_impacts","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":5,"value":"-1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"projectile_hit_script","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":3,"value":"True","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"projectile_stagger","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"512","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"projectile_audio_max_distance_to_be_heard","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"256","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"projectile_audio_falloff_start","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":4,"value":"audio_falloff_linear_distance","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"projectile_audio_falloff_model","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

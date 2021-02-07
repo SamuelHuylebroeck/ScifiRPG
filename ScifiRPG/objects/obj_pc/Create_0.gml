@@ -39,6 +39,7 @@ current_attack_script = scr_player_attack_slash_1;
 next_attack_script = scr_player_attack_slash_1;
 attack_done = true
 entities_hit_by_attack = -1
+projectiles_hit_by_attack = -1
 
 max_speed_walk=walk_speed_pps/game_get_speed(gamespeed_fps)
 
@@ -59,3 +60,6 @@ xp_to_next_level = (current_level+1) * global.levelling_xp_scale
 current_xp = 0;
 
 energy_regen_gs = energy_regen /game_get_speed(gamespeed_fps);
+
+
+

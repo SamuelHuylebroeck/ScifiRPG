@@ -27,6 +27,7 @@
     {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"parent":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
+    {"varType":3,"value":"True","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"enemy_apply_tile_collision","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"0.75","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"enemy_speed","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"180","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"enemy_turn_rate","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"15","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"enemy_move_angle_tolerance","tags":[],"resourceType":"GMObjectProperty",},
@@ -41,6 +42,9 @@
     {"varType":5,"value":"-1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"enemy_sfx_attack","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":5,"value":"-1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"enemy_sfx_attack_hit","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":4,"value":"global.levelling_enemy_base_xp","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"enemy_xp_given","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":4,"value":"ENEMY_STATE.WANDER","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"enemy_state_default","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":5,"value":"noone","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"patrol_path","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":3,"value":"True","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"enemy_can_be_staggered","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

@@ -37,7 +37,7 @@ function scr_initialize_goto()
 function check_for_aggro_goto()
 {
 	if(scr_enemy_check_aggro()){
-		show_debug_message("Target Found!");
+		//show_debug_message("Target Found!");
 		scr_enemy_aggro_play_acquired_sfx();
 		scr_enemy_aggro_setup_chase();
 		//goto specific cleanup

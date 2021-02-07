@@ -3,9 +3,9 @@
 if(current_music_duration < crossfade_duration_gs)
 {
 	fade_track = track_list[| current_track];
-	audio_sound_gain(fade_track, 0 ,crossfade_duration * 1000)
+	if(fade_track != noone) audio_sound_gain(fade_track, 0 ,crossfade_duration * 1000)
 	gain_track = track_list[| next_track];
-	audio_sound_gain(gain_track, 1000*global.sound_music_scale*global.sound_master_scale ,crossfade_duration * 1000)
+	if(gain_track != noone) audio_sound_gain(gain_track, 1000*global.sound_music_scale*global.sound_master_scale ,crossfade_duration * 1000)
 }
 
 if(current_music_duration <=0)

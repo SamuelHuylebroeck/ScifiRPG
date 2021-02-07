@@ -31,8 +31,26 @@ function scr_ep_deactivate_level_2(){
 	}
 }
 
+
+function scr_ep_activate_level_3(){
+	with(player_character)
+	{
+		projectile_object = obj_pc_piercing_energy_bolt
+
+	}
+}
+
+function scr_ep_deactivate_level_3(){
+	with(player_character)
+	{
+		projectile_object = obj_pc_energy_bolt
+
+	}
+}
+
 function scr_ep_deactivate_all(){
 	scr_ep_deactivate_level_1()
 	scr_ep_deactivate_level_2()
+	scr_ep_deactivate_level_3()
 
 }

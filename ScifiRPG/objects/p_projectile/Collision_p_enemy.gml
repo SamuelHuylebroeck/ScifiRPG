@@ -3,6 +3,7 @@
 if(projectile_impact_enemy and not has_impacted)
 {
 	has_impacted = true;
+	--projectile_nr_impacts;
 	if(projectile_impact_sfx != -1)
 	{
 		audio_sound_gain(projectile_impact_sfx,global.sfx_gain_base*global.sound_effect_scale*global.sound_master_scale,0)

@@ -8,8 +8,8 @@ if(flash != 0){
 draw_sprite_ext(
 	sprite_index,
 	image_index,
-	floor(x),
-	floor(y-z),
+	x,
+	y,
 	image_xscale,
 	image_yscale,
 	image_angle,

@@ -36,13 +36,20 @@ function scr_player_combo_attack(default_next, next_chain, frame_start, frame_en
 				break
 		}
 	
-		//Clear hit list
+		//Clear hit lists
 		if (!ds_exists(entities_hit_by_attack, ds_type_list))
 		{
 			entities_hit_by_attack = ds_list_create();
 			
 		}
 		ds_list_clear(entities_hit_by_attack);
+		
+		if (!ds_exists(projectiles_hit_by_attack, ds_type_list))
+		{
+			projectiles_hit_by_attack = ds_list_create();
+		}
+		ds_list_clear(projectiles_hit_by_attack);
+		
 		if(refresh_frames != noone and is_array(refresh_frames))
 		{
 			for(var i = 0; i < array_length(refresh_frames);i++)
@@ -73,6 +80,7 @@ function scr_player_combo_attack(default_next, next_chain, frame_start, frame_en
 			if (image_index == refresh_frames[j] && !refresh_frames_passed[refresh_frames[j]])
 			{
 				ds_list_clear(entities_hit_by_attack)
+				ds_list_clear(projectiles_hit_by_attack)
 				refresh_frames_passed[refresh_frames[j]] = true
 			}
 		}
@@ -134,6 +142,7 @@ function scr_calculate_attack_hits(hitbox_mask, damage, knockback, sfx_hit){
 	var old_mask = mask_index
 	mask_index = hitbox_mask
 	var hit_by_attack_now = ds_list_create()
+	var projectiles_hit_by_attack_now = ds_list_create()
 	var hits = instance_place_list(x,y, p_entity, hit_by_attack_now, false)
 	
 	if(hits > 0)
@@ -149,7 +158,7 @@ function scr_calculate_attack_hits(hitbox_mask, damage, knockback, sfx_hit){
 				{
 					if(object_is_ancestor(object_index, p_enemy))
 					{
-						show_debug_message(string(damage));
+		
 						hurt_enemy(id, damage, other.id, knockback, sfx_hit);
 					}
 					else if(entity_hit_script != -1) script_execute(entity_hit_script);
@@ -158,7 +167,25 @@ function scr_calculate_attack_hits(hitbox_mask, damage, knockback, sfx_hit){
 		}
 			
 	}
-	
+	var projectile_hits = instance_place_list(x,y, p_projectile, projectiles_hit_by_attack_now, false)
+	if(projectile_hits > 0 ){
+		for (var i = 0; i<projectile_hits;i++)
+		{
+			var hit_id = projectiles_hit_by_attack_now[| i];
+			if(ds_list_find_index(projectiles_hit_by_attack, hit_id) == -1)
+			{
+				ds_list_add(projectiles_hit_by_attack, hit_id)
+				with(hit_id)
+				{
+					if(projectile_hit_script != -1){ 
+						script_execute(projectile_hit_script);
+					}
+				}
+			}
+		}
+
+	}
 	ds_list_destroy(hit_by_attack_now)
+	ds_list_destroy(projectiles_hit_by_attack_now)
 	mask_index = old_mask
 }

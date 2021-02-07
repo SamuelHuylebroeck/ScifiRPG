@@ -24,24 +24,7 @@ function scr_gunner_attack(){
 	//Create Shot
 	if(floor(image_index) == 5 and  shots_fired < shots_to_fire){
 		//Calculate the correct coordinates to create the shot at by rotating the base vector along the current direction
-		var c = dcos(direction)
-		var s = dsin(direction)
-		var shot_origin_correction_x = shot_origin_base_correction_x * c + shot_origin_base_correction_y *s;
-		var shot_origin_correction_y = shot_origin_base_correction_x * (-1*s) + shot_origin_base_correction_y * c
-		
-		
-		
-		shot_fired = instance_create_layer(x+shot_origin_correction_x,y+shot_origin_correction_y,"Instances",obj_enemy_gunner_energy_bolt);
-		if(enemy_sfx_attack != -1)
-		{
-			audio_sound_gain(enemy_sfx_attack, global.sfx_gain_base*global.sound_effect_scale*global.sound_master_scale,0)
-			audio_play_sound_on(entity_emit,enemy_sfx_attack,false,global.sfx_priority)
-		}
-		with(shot_fired)
-		{
-			direction = other.direction
-			image_angle = other.direction
-		}
+		fire_single_shot(obj_enemy_gunner_energy_bolt, direction,shot_origin_base_correction_x, shot_origin_base_correction_y,enemy_sfx_attack, entity_emit)
 		shots_fired++
 	}
 	//End the attack
@@ -65,4 +48,25 @@ function scr_gunner_attack_init(){
 		image_index=0;
 		state_initialized = true;
 		shots_fired = 0;
+}
+
+function fire_single_shot(shot_type, angle, origin_correction_x, origin_correction_y, shot_sfx, sfx_emitter){
+		//Calculate the correct coordinates to create the shot at by rotating the base vector along the current direction
+		var c = dcos(angle)
+		var s = dsin(angle)
+		var shot_origin_correction_x = origin_correction_x * c + origin_correction_y *s;
+		var shot_origin_correction_y = origin_correction_x * (-1*s) + origin_correction_y * c
+		
+		var shot_fired = instance_create_layer(x+shot_origin_correction_x,y+shot_origin_correction_y,"Instances",shot_type);
+		if(shot_sfx != -1)
+		{
+			var sfx = audio_play_sound_on(sfx_emitter,shot_sfx,false,global.sfx_priority)
+			audio_sound_gain(sfx, global.sfx_gain_base*global.sound_effect_scale*global.sound_master_scale,0)
+			
+		}
+		with(shot_fired)
+		{
+			direction = angle
+			image_angle = angle
+		}	
 }

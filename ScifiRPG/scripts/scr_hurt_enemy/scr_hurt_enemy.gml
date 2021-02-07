@@ -21,17 +21,21 @@ function hurt_enemy(enemy, damage, source, knockback, sfx_hit)
 				}
 				state = ENEMY_STATE.DIE
 			}else{
-				if(state != ENEMY_STATE.HURT) state_previous = state
-				state = ENEMY_STATE.HURT
+				if(enemy_can_be_staggered)
+				{
+					if(state != ENEMY_STATE.HURT) state_previous = state
+					state = ENEMY_STATE.HURT
+					image_index = 0;
+					if(knockback != 0 )
+					{
+						var knock_direction = point_direction(x,y,(source).x, (source).y)
+						x_to = x - lengthdir_x(knockback, knock_direction);
+						y_to = y - lengthdir_y(knockback, knock_direction);
+					}
+				}
 			
 			}
-			image_index = 0;
-			if(knockback != 0 )
-			{
-				var knock_direction = point_direction(x,y,(source).x, (source).y)
-				x_to = x - lengthdir_x(knockback, knock_direction);
-				y_to = y - lengthdir_y(knockback, knock_direction);
-			}
+
 		}
 	
 	}

@@ -36,7 +36,7 @@ function scr_enemy_aggro_deaggro_check(){
 	{
 		//De-aggro
 		target = noone;
-		if(state_default==ENEMY_STATE.WANDER)
+		if(enemy_state_default==ENEMY_STATE.WANDER)
 		{
 			state_target = ENEMY_STATE.WANDER;
 			state = ENEMY_STATE.GOTO;
@@ -44,7 +44,7 @@ function scr_enemy_aggro_deaggro_check(){
 			x_to = xstart;
 			y_to = ystart;
 		}
-		if(state_default==ENEMY_STATE.PATROL)
+		if(enemy_state_default==ENEMY_STATE.PATROL)
 		{
 			state_target = ENEMY_STATE.PATROL;
 			state = ENEMY_STATE.GOTO;

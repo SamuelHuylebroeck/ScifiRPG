@@ -14,11 +14,13 @@ input_direction = point_direction(0,0,key_right_held-key_left_held, key_down_hel
 input_magnitude = (key_right_held-key_left_held != 0) or (key_down_held-key_up_held != 0)
 
 //Set audio listener
-audio_listener_position(x,y,0)
+if (input_magnitude != 0)
+{
+	audio_listener_position(x,y,0)
+}
 
 if(!global.game_paused)
 {
-	depth = -bbox_bottom
 	flash = max(0, flash -0.04)
 }
 

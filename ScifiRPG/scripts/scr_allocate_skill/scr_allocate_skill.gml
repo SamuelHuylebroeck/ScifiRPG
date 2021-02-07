@@ -34,7 +34,7 @@ function scr_allocate_skill(){
 }
 	
 function scr_deallocate_skill(){ 
-	nr_states = array_length_1d(sprite_map)
+	var nr_states = array_length_1d(sprite_map)
 	var next_state = max((state-1)%nr_states,0)
 	player_character.allocated_reactor_points=max(0,player_character.allocated_reactor_points - state);
 	if(skill_inverse_script_map[state] != -1)

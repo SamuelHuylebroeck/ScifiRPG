@@ -1,0 +1,1 @@
+current_missile_inert_time = max(0, --current_missile_inert_time)

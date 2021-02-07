@@ -28,6 +28,7 @@ enum PLAYER_STATE
 
 enum ENEMY_STATE
 {
+	DIE,
 	IDLE,
 	WANDER,
 	GOTO,
@@ -35,7 +36,6 @@ enum ENEMY_STATE
 	CHASE,
 	ATTACK,
 	HURT,
-	DIE,
 	WAIT
 }
 
@@ -47,6 +47,32 @@ enum SPAWNER_STATE
 	WAIT
 }
 
+enum BOSS_STATE
+{
+	IDLE,
+	MISSILES_HUNT,
+	MISSILES_PATROL,
+	LASER_HUNT,
+	LASER_SWEEP,
+	GOTO_PATROL_1,
+	PATROL_1,
+	GOTO_PATROL_2,
+	PATROL_2,
+	CHASE,
+	RETREAT
+}
+
+enum MISSILE_STATES
+{
+	INERT,
+	FIRING
+
+}
+
 //Colour definition
 #macro GUI_ORANGE_DARK make_color_rgb(147,78,72)
 #macro GUI_ORANGE_BRIGHT make_color_rgb(188,133,99)
+
+#macro PARTICLE_GREEN_DARK make_color_rgb(81,108,94)
+#macro PARTICLE_GREEN_LIGHT make_color_rgb(175,179,129)
+#macro PARTICLE_GREEN_EXTRA_DARK make_color_rgb(75,90,87)

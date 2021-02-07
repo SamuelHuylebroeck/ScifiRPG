@@ -82,5 +82,5 @@ draw_set_color(old_color)
 
 //Draw instructions
 if(global.debug_show_controls){
-	scr_draw_instructions(800,100)
+	scr_draw_instructions(850,25)
 }

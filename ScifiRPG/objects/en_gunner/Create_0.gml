@@ -4,9 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-//Initial Config
-state = ENEMY_STATE.WANDER
-
 //Intrinsic variables
 anticipation_pause_duration = 0.25 *  game_get_speed(gamespeed_fps)
 anticipation_pause = 0;

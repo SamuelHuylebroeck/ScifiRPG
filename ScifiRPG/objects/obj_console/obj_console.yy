@@ -24,10 +24,11 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"parent":{"name":"obj_console","path":"objects/obj_console/obj_console.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_console","path":"objects/obj_console/obj_console.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
     {"varType":0,"value":"3","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"console_activation_time","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":1,"value":"3","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"console_xp_contents","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [
     {"propertyId":{"name":"entity_activate_script","path":"objects/p_entity/p_entity.yy",},"objectId":{"name":"p_entity","path":"objects/p_entity/p_entity.yy",},"value":"scr_activate_console","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
