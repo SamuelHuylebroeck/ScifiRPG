@@ -23,8 +23,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "ui",
-    "path": "folders/Objects/ui.yy",
+    "name": "title_screen",
+    "path": "folders/Objects/ui/title_screen.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_attribution",

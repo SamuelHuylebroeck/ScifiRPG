@@ -11,5 +11,5 @@ if(controlling_spawner != noone)
 path_delete(goto_path);
 
 with(obj_pc){
-	current_xp = min(current_xp + other.enemy_xp_given, xp_to_next_level)	
+	if(current_level < max_level) current_xp += other.enemy_xp_given
 }

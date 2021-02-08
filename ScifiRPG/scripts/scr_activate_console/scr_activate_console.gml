@@ -6,7 +6,7 @@ function scr_activate_console(){
 		image_index = 1
 		console_activated = true
 		with(obj_pc){
-			current_xp += other.console_xp_contents
+			if(current_level < max_level) current_xp += other.console_xp_contents
 		}
 	}
 }

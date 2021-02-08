@@ -6,7 +6,7 @@ function scr_levelup(){
 	available_reactor_points++;
 	audio_sound_gain(so_sfx_level,global.sfx_gain_base*global.sound_effect_scale*global.sound_master_scale,0)
 	audio_play_sound(so_sfx_level,global.sfx_priority,false)
-	current_xp = 0;
+	current_xp -= xp_to_next_level;
 	xp_to_next_level = (current_level+1) * global.levelling_xp_scale
 	current_hp = max_hp
 }
