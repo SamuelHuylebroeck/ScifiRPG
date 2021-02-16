@@ -4,7 +4,7 @@ function scr_fr_activate_level_1(){
 	with(player_character)
 	{
 		var rel_health = current_hp/max_hp;
-		max_hp += 20;
+		max_hp += 40;
 		current_hp = rel_health * max_hp
 	}
 }
@@ -13,7 +13,7 @@ function scr_fr_deactivate_level_1(){
 	with(player_character)
 	{
 		var rel_health = current_hp/max_hp;
-		max_hp -= 20;
+		max_hp -= 40;
 		current_hp = rel_health * max_hp
 	}
 }

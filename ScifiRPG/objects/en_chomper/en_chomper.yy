@@ -27,18 +27,19 @@
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"en_chomper","path":"objects/en_chomper/en_chomper.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
-    {"varType":0,"value":"3","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"chomper_damage","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"10","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"chomper_damage","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"32","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"chomper_knockback","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [
     {"propertyId":{"name":"entity_hit_script","path":"objects/p_entity/p_entity.yy",},"objectId":{"name":"p_entity","path":"objects/p_entity/p_entity.yy",},"value":"scr_entity_hit_flash","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"entity_collision","path":"objects/p_entity/p_entity.yy",},"objectId":{"name":"p_entity","path":"objects/p_entity/p_entity.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"enemy_attack_radius","path":"objects/p_enemy/p_enemy.yy",},"objectId":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"value":"21","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"enemy_max_hp","path":"objects/p_enemy/p_enemy.yy",},"objectId":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"value":"50","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"enemy_max_hp","path":"objects/p_enemy/p_enemy.yy",},"objectId":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"value":"60","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"enemy_sfx_aggro","path":"objects/p_enemy/p_enemy.yy",},"objectId":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"value":"so_chomper_aggro","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"enemy_sfx_death","path":"objects/p_enemy/p_enemy.yy",},"objectId":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"value":"so_chomper_death","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"enemy_sfx_attack_hit","path":"objects/p_enemy/p_enemy.yy",},"objectId":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"value":"so_chomper_hit","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"enemy_sfx_attack","path":"objects/p_enemy/p_enemy.yy",},"objectId":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"value":"so_chomper_attack","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"enemy_aggro_duration","path":"objects/p_enemy/p_enemy.yy",},"objectId":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"value":"5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "enemies",

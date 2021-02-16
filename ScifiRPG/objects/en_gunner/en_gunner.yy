@@ -35,7 +35,7 @@
   ],
   "overriddenProperties": [
     {"propertyId":{"name":"entity_collision","path":"objects/p_entity/p_entity.yy",},"objectId":{"name":"p_entity","path":"objects/p_entity/p_entity.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"enemy_max_hp","path":"objects/p_enemy/p_enemy.yy",},"objectId":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"value":"20","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"enemy_max_hp","path":"objects/p_enemy/p_enemy.yy",},"objectId":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"value":"30","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"enemy_attack_radius","path":"objects/p_enemy/p_enemy.yy",},"objectId":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"value":"128","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"enemy_move_angle_tolerance","path":"objects/p_enemy/p_enemy.yy",},"objectId":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"value":"10","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"enemy_aggro_radius","path":"objects/p_enemy/p_enemy.yy",},"objectId":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"value":"96","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},

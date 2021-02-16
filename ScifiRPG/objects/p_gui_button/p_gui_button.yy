@@ -34,8 +34,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "ui",
-    "path": "folders/Objects/ui.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "p_gui_button",

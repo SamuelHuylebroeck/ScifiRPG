@@ -18,8 +18,18 @@ function hurt_enemy(enemy, damage, source, knockback, sfx_hit)
 				{
 					audio_sound_gain(enemy_sfx_death,global.sfx_gain_base*global.sound_effect_scale*global.sound_master_scale,0)
 					audio_play_sound_on(entity_emit,enemy_sfx_death,false,global.sfx_priority)
+					state_initialized = false;
+					
+					if(knockback != 0 and  enemy_can_be_staggered)
+					{
+						var knock_direction = point_direction(x,y,(source).x, (source).y)
+						x_to = x - lengthdir_x(knockback, knock_direction);
+						y_to = y - lengthdir_y(knockback, knock_direction);
+					}
+					
 				}
 				state = ENEMY_STATE.DIE
+				
 			}else{
 				if(enemy_can_be_staggered)
 				{

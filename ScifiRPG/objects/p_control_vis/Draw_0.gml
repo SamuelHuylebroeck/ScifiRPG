@@ -1,0 +1,16 @@
+draw_self()
+var old_halign = draw_get_halign()
+var old_font= draw_get_font()
+var old_color = draw_get_color()
+var old_valign = draw_get_valign()
+
+draw_set_color(control_vis_color)
+draw_set_font(control_vis_font)
+draw_set_halign(fa_left)
+draw_set_valign(fa_middle)
+draw_text(x+sprite_width+control_vis_corr_x,y+control_vis_corr_y, string(control_vis_key) +": "+string(control_vis_text))
+
+draw_set_halign(old_halign)
+draw_set_valign(old_valign)
+draw_set_color(old_color)
+draw_set_font(old_font)

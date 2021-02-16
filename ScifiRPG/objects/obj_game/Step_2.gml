@@ -21,6 +21,3 @@ if(keyboard_check_pressed(ord(global.pause_key)))
 	}
 }
 
-if(keyboard_check_pressed(ord(global.keyboard_switch_key))){
-	scr_qwerty_azerty_switch()
-}

@@ -1,0 +1,42 @@
+{
+  "spriteId": null,
+  "solid": false,
+  "visible": true,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "p_text",
+    "path": "objects/p_text/p_text.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 1,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"obj_paragraph","path":"objects/obj_paragraph/obj_paragraph.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [
+    {"varType":2,"value":"placeholder title","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"para_title","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":5,"value":"GUI_ORANGE_BRIGHT","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"para_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":5,"value":"fo_text_small","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"para_font","tags":[],"resourceType":"GMObjectProperty",},
+  ],
+  "overriddenProperties": [
+    {"propertyId":{"name":"text_font","path":"objects/p_text/p_text.yy",},"objectId":{"name":"p_text","path":"objects/p_text/p_text.yy",},"value":"fo_text_alternate_small","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
+  "parent": {
+    "name": "title_screen",
+    "path": "folders/Objects/ui/title_screen.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "obj_paragraph",
+  "tags": [],
+  "resourceType": "GMObject",
+}

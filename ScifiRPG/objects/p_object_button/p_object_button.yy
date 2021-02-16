@@ -33,6 +33,8 @@
     {"varType":4,"value":"[]","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"button_activation_args","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"0.3","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"button_press_recovery","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":2,"value":"Placeholder","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"button_text","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":5,"value":"fo_title_small","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"button_font","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":5,"value":"GUI_ORANGE_DARK","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"button_text_color","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

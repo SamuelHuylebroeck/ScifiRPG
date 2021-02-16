@@ -103,7 +103,6 @@ function scr_player_combo_attack(default_next, next_chain, frame_start, frame_en
 	
 }
 
-
 function scr_player_attack_slash_1(){
 	// Config, sprite specific data
 	var frame_start = 0
@@ -111,7 +110,7 @@ function scr_player_attack_slash_1(){
 	var default_state = PLAYER_STATE.FREE
 	var next_chain = scr_player_attack_slash_2
 	var damage = 5;
-	var knockback = 10;
+	var knockback = 5;
 	scr_player_combo_attack(default_state, next_chain, frame_start, frame_end, noone, damage, knockback,so_pc_combo_slash_1, so_pc_combo_slash_hit)
 }
 
@@ -121,7 +120,7 @@ function scr_player_attack_slash_2(){
 	var frame_end = 8
 	var default_state = PLAYER_STATE.FREE
 	var next_chain = scr_player_attack_spin
-	var damage = 5;
+	var damage = 10;
 	var knockback = 10;
 	scr_player_combo_attack(default_state, next_chain, frame_start, frame_end, noone, damage, knockback,so_pc_combo_slash_1, so_pc_combo_slash_hit)
 }
@@ -131,7 +130,7 @@ function scr_player_attack_spin(){
 	var frame_end = 14
 	var default_state = PLAYER_STATE.FREE
 	var next_chain = noone
-	var damage = 5;
+	var damage = 8;
 	var knockback = 32;
 	scr_player_combo_attack(default_state, next_chain, frame_start, frame_end,[11], damage, knockback,so_pc_combo_slash_spin, so_pc_combo_slash_hit)
 	current_combo_cooldown = combo_cooldown

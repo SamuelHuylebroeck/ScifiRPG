@@ -19,6 +19,8 @@ function scr_draw_instructions(pos_x, pos_y){
 	cur_pos_y +=16
 	draw_text(cur_pos_x, cur_pos_y, "Pause game: "+string(global.pause_key))
 	cur_pos_y +=16
+	draw_text(cur_pos_x, cur_pos_y, "Switch between Azerty and Querty movement: "+string(global.keyboard_switch_key))
+	cur_pos_y +=16
 	//hide instructions
 	draw_text(cur_pos_x, cur_pos_y, "Hide instructions: F10" )
 	cur_pos_y +=16

@@ -3,7 +3,7 @@
 function scr_nfa_activate_level_1(){
 	with(player_character)
 	{
-		melee_damage_bonus += 5;
+		melee_damage_bonus += 3;
 	}
 
 }
@@ -11,7 +11,7 @@ function scr_nfa_activate_level_1(){
 function scr_nfa_activate_level_2(){
 	with(player_character)
 	{
-		melee_damage_bonus += 5;
+		melee_damage_bonus += 2;
 	}
 
 }
@@ -28,14 +28,14 @@ function scr_nfa_activate_level_3(){
 function scr_nfa_deactivate_level_1(){
 	with(player_character)
 	{
-		melee_damage_bonus -= 5;
+		melee_damage_bonus -= 3;
 	}
 }
 
 function scr_nfa_deactivate_level_2(){
 	with(player_character)
 	{
-		melee_damage_bonus -= 5;
+		melee_damage_bonus -= 2;
 	}
 
 }
