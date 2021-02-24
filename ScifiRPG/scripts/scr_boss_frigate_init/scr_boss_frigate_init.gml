@@ -8,8 +8,9 @@ function scr_boss_frigate_init(boss, target){
 		state = BOSS_STATE.CHASE
 		boss_draw_healthbar = true;
 		if(boss_entry_sfx != -1){
-			audio_sound_gain(boss_entry_sfx,global.sfx_gain_base*global.sound_effect_scale*global.sound_master_scale,0)
-			audio_play_sound_on(entity_emit,boss_entry_sfx,false,global.sfx_priority)
+			var sfx = audio_play_sound(boss_entry_sfx,global.sfx_priority, false)
+			audio_sound_gain(sfx,global.sfx_gain_base*global.sound_effect_scale*global.sound_master_scale,0)
+
 		}
 		
 		with(turret_left){

@@ -25,8 +25,23 @@ function scr_chomper_hurt(){
 		y = y_to
 		image_speed=1.0
 		if(image_index >= 3.8){
+			switch(state_previous){
+				case ENEMY_STATE.ATTACK:
+					state = ENEMY_STATE.CHASE
+					break;
+				case ENEMY_STATE.PATROL:
+					//Go back to the start of the patrol path
+					scr_enemy_order_to_patrol_start()
+					break;
+				case ENEMY_STATE.IDLE:
+				default:
+					state = state_previous
+					state_previous = -1
+					state_initialized = false;
+					break;
+				
+			}
 			
-			if(state_previous != ENEMY_STATE.ATTACK) state = state_previous; else state = ENEMY_STATE.CHASE
 		}
 		
 	}

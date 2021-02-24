@@ -1,6 +1,11 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_gunner_chase(){
+	if (not state_initialized){
+		current_enemy_aggro_duration = enemy_aggro_duration_gs;
+		state_initialized = true;
+	}
+	
 	if (instance_exists(target) )
 	{
 		x_to = target.x;
@@ -39,4 +44,6 @@ function scr_gunner_chase(){
 		state = ENEMY_STATE.ATTACK;
 		state_initialized = false;
 	}
+	
+	scr_enemy_aggro_deaggro_check();
 }

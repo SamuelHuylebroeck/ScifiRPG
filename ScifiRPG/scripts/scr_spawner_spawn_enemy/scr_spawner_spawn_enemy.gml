@@ -26,29 +26,24 @@ function scr_spawner_spawn_enemy(){
 					collision_map = layer_tilemap_get_id(layer_get_id("Collision"))
 					flash=0.5;
 					image_alpha = 0.25;
-					state_initialized = false;
 					direction = other.direction;
 					if(other.spawner_xp_giving_units ==0) enemy_xp_given = 0
 					
 					if(other.spawner_patrol_path != -1)
 					{
 						patrol_path = other.spawner_patrol_path;
-						state = ENEMY_STATE.GOTO;
-						state_target = ENEMY_STATE.PATROL;
-						state_default = ENEMY_STATE.PATROL;
-						x_to = path_get_point_x(patrol_path,0);
-						y_to = path_get_point_y(patrol_path,0);
-						
+						scr_enemy_order_to_patrol_start()
 					}else
 					{
 						var length = 80;
 						
-						xstart = xstart + lengthdir_x(length, other.image_angle-90);
-						ystart = ystart + lengthdir_y(length, other.image_angle-90);
+						xstart = xstart + lengthdir_x(length, other.image_angle);
+						ystart = ystart + lengthdir_y(length, other.image_angle);
 						x_to = xstart;
 						y_to = ystart;
 						state = ENEMY_STATE.GOTO;
-						state_default = ENEMY_STATE.WANDER;
+						enemy_state_default = ENEMY_STATE.WANDER;
+						state_initialized = false;
 					}
 				}
 			}
@@ -66,4 +61,13 @@ function scr_spawner_spawn_enemy(){
 		spawn_in_progress = false;
 	}
 	
+}
+
+function scr_enemy_order_to_patrol_start(){
+	state = ENEMY_STATE.GOTO;
+	state_target = ENEMY_STATE.PATROL;
+	enemy_state_default = ENEMY_STATE.PATROL;
+	state_initialized = false;
+	x_to = path_get_point_x(patrol_path,0);
+	y_to = path_get_point_y(patrol_path,0);
 }

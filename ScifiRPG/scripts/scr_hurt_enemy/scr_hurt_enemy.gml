@@ -42,6 +42,11 @@ function hurt_enemy(enemy, damage, source, knockback, sfx_hit)
 						x_to = x - lengthdir_x(knockback, knock_direction);
 						y_to = y - lengthdir_y(knockback, knock_direction);
 					}
+					if state_previous = ENEMY_STATE.PATROL 
+					{
+						path_end()
+					
+					}
 				}
 			
 			}

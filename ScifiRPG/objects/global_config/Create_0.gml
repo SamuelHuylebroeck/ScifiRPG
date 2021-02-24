@@ -28,4 +28,5 @@ global.debug_show_controls = true;
 global.debug_boss = false;
 global.debug_draw_audio_listeners = false;
 global.debug_draw_debug_commands = false;
+global.debug_enemy_states = false;
 

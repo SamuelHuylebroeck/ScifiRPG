@@ -46,11 +46,7 @@ function scr_enemy_aggro_deaggro_check(){
 		}
 		if(enemy_state_default==ENEMY_STATE.PATROL)
 		{
-			state_target = ENEMY_STATE.PATROL;
-			state = ENEMY_STATE.GOTO;
-			state_initialized = false;
-			x_to = path_get_point_x(patrol_path, 0);
-			y_to = path_get_point_y(patrol_path, 0);;
+			scr_enemy_order_to_patrol_start()
 		}
 	}
 	

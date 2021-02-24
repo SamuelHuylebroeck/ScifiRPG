@@ -16,6 +16,22 @@ function scr_enemy_hurt(){
 	{
 		x = x_to
 		y = y_to
-		if(state_previous != ENEMY_STATE.ATTACK) state = state_previous; else state = ENEMY_STATE.CHASE
+		
+		switch(state_previous){
+			case ENEMY_STATE.ATTACK:
+				state = ENEMY_STATE.CHASE
+				break;
+			case ENEMY_STATE.PATROL:
+				//Go back to the start of the patrol path
+				scr_enemy_order_to_patrol_start()
+				break;
+			case ENEMY_STATE.IDLE:
+			default:
+				state = state_previous
+				state_previous = -1
+				state_initialized = false;
+				break;
+				
+		}
 	}
 }
