@@ -51,6 +51,7 @@ function hurt_player(player, damage, source, knockback, do_stagger)
 				if( current_hp <= 0 ) {
 					sprite_index = spr_pc_hurt;
 					state = PLAYER_STATE.DIE;
+					scr_game_end_defeat_trigger()
 				}else{
 					if(do_stagger) 
 					{

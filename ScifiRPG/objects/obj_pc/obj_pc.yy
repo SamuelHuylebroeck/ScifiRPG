@@ -24,7 +24,6 @@
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_pc","path":"objects/obj_pc/obj_pc.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_pc","path":"objects/obj_pc/obj_pc.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"obj_pc","path":"objects/obj_pc/obj_pc.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":66,"eventType":9,"collisionObjectId":null,"parent":{"name":"obj_pc","path":"objects/obj_pc/obj_pc.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":101,"eventType":9,"collisionObjectId":null,"parent":{"name":"obj_pc","path":"objects/obj_pc/obj_pc.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
@@ -34,7 +33,7 @@
     {"varType":0,"value":"0.25","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"combo_cooldown","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":1,"value":"1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"available_reactor_points","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"0.3","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"energy_regen","tags":[],"resourceType":"GMObjectProperty",},
-    {"varType":0,"value":"10","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"max_level","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"12","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"max_level","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":5,"value":"obj_pc_energy_bolt","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"projectile_object","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],

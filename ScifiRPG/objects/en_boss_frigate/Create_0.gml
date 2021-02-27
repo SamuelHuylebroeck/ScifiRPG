@@ -76,3 +76,5 @@ spinup_complete = false;
 
 nr_of_retreats = 0
 next_retreat_point = (1- (nr_of_retreats +1) *boss_retreat_fraction) * enemy_max_hp 
+
+defeated = false;

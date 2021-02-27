@@ -6,6 +6,8 @@ if(!player_debug_mode)
 	available_reactor_points +=100
 	walk_speed_pps += 64
 	max_speed_walk=walk_speed_pps/game_get_speed(gamespeed_fps)
+	melee_damage_bonus +=100
+	ranged_damage_bonus +=100
 	
 }
  
@@ -16,5 +18,7 @@ if (player_debug_mode)
 	available_reactor_points -=100
 	walk_speed_pps -= 64
 	max_speed_walk=walk_speed_pps/game_get_speed(gamespeed_fps)
+	melee_damage_bonus -=100
+	ranged_damage_bonus -=100
 }
 player_debug_mode = !player_debug_mode

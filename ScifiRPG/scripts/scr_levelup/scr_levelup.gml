@@ -9,4 +9,7 @@ function scr_levelup(){
 	current_xp -= xp_to_next_level;
 	xp_to_next_level = (current_level+1) * global.levelling_xp_scale
 	current_hp = max_hp
+	if(current_level == max_level){
+		current_xp = xp_to_next_level
+	}
 }
